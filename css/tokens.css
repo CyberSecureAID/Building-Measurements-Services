@@ -28,4 +28,8 @@
   --maxw:1240px;
   --pad:clamp(20px, 5vw, 72px);
   --grid-size:44px;
+
+  /* --- radios (esquinas redondeadas) --- */
+  --radius:12px;
+  --radius-sm:8px;
 }

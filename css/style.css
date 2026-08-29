@@ -38,7 +38,7 @@ h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em;line-height:1.1}
 .btn{
   display:inline-flex;align-items:center;gap:9px;
   font-family:var(--font-display);font-weight:600;font-size:13px;
-  letter-spacing:.03em;padding:13px 22px;border:1px solid transparent;
+  letter-spacing:.03em;padding:13px 24px;border:1px solid transparent;border-radius:var(--radius-sm);
   cursor:pointer;transition:.22s;white-space:nowrap;
 }
 .btn .ar{transition:transform .22s}
