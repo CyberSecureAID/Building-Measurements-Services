@@ -152,3 +152,17 @@ textarea.field{min-height:120px;resize:vertical}
 .cta-band{background:var(--navy);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
 .cta-band h2{font-size:clamp(26px,4vw,46px);font-weight:800;margin-bottom:18px}
 .cta-band p{color:var(--steel);max-width:52ch;margin:0 auto 30px}
+
+/* ---------- service detail blocks (services.html) ---------- */
+.service-block{border-top:1px solid var(--line);padding:clamp(40px,6vw,64px) 0}
+.service-block:first-of-type{border-top:0;padding-top:0}
+.sb-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
+.sb-num{font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:.14em}
+.sb-ico{width:44px;height:44px;color:var(--accent);margin:18px 0 20px}
+.service-block h2{font-size:clamp(24px,3.2vw,36px);font-weight:800;margin-bottom:14px}
+.sb-intro{color:var(--steel);font-size:15px;max-width:42ch}
+.svc-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.svc-list li{list-style:none;padding:15px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;color:var(--white);display:flex;gap:10px;align-items:baseline}
+.svc-list li::before{content:"\203A";color:var(--accent);font-family:var(--font-mono)}
+@media (max-width:840px){.sb-grid{grid-template-columns:1fr;gap:28px}}
+@media (max-width:520px){.svc-list{grid-template-columns:1fr}}
