@@ -38,29 +38,38 @@ Mensaje núcleo: **Canadian Expertise. Global Delivery.**
 - **Trabajar de a un archivo por vez**, esperando confirmación antes de seguir.
 - **Ser conciso.** Sin preámbulos ni resúmenes largos.
 - **CACHÉ — CRÍTICO:** los CSS/JS se enlazan con `?v=N`. Si tocas un CSS o el JS y **no subes el número**, el navegador sirve la versión vieja. Subir siempre la versión.
-- **Header y footer** son bloques compartidos: idénticos en todas las páginas. Si se editan, replicar en todas (con script, no a mano) y marcar `aria-current="page"` en el nav activo.
+- **RUTAS EXPLÍCITAS:** al entregar cualquier archivo, indicar SIEMPRE la ruta exacta donde va dentro del repo (ej. `about/index.html`). No dejar que el usuario adivine.
+- **Header y footer** son bloques compartidos: idénticos en todas las páginas (solo cambian el prefijo de ruta `../` y el `aria-current="page"` del enlace activo).
 
 ---
 
-## 3. Estructura del repo
+## 3. Estructura del repo (URLs limpias, sin `.html`)
+
+Cada página va en su **propia carpeta** como `index.html` → la URL queda `/about/`, `/services/`, etc. (nunca `about.html`).
 
 ```
-ardevon-web/
-├─ index.html                 ← Home (Fase 1 lista)
+ardevon-web/            (raíz del repo)
+├─ index.html           → Home  (URL: / )
+├─ about/index.html     → About (URL: /about/ )
+├─ services/index.html  → Services (URL: /services/ )
+├─ sectors/index.html   → (pendiente) /sectors/
+├─ projects/index.html  → (pendiente) /projects/
+├─ global/index.html    → (pendiente) /global/
+├─ contact/index.html   → (pendiente) /contact/
+├─ careers/index.html   → (pendiente) /careers/
+├─ insights/index.html  → (pendiente) /insights/
 ├─ README.md
 ├─ favicon.svg
-├─ css/
-│  ├─ tokens.css              ← variables: color, tipografía, espaciado
-│  ├─ style.css               ← reset, base, botones, utilidades, animaciones
-│  ├─ layout.css              ← contenedor, secciones, encabezados de sección
-│  ├─ header.css              ← topbar, header/nav, footer (bloques compartidos)
-│  └─ components.css          ← hero, servicios, proceso, sectores, proyectos, global, contacto
-├─ js/
-│  └─ main.js                 ← reveal on-scroll, menú móvil
-└─ images/                    ← (pendiente: fotos reales de proyectos/obra)
+├─ css/  tokens.css · style.css · layout.css · header.css · components.css
+├─ js/   main.js
+└─ images/              → (pendiente: fotos reales)
 ```
 
-Orden de carga del CSS (importa por la cascada): `tokens → style → layout → header → components`.
+**Rutas de assets:** desde la raíz (`index.html`) se enlaza `css/…`, `js/…`, `favicon.svg`.
+Desde una subcarpeta (`about/index.html`, etc.) se enlaza con `../css/…`, `../js/…`, `../favicon.svg`.
+Enlaces del nav: desde raíz `about/`, `services/`… ; desde subcarpeta `../about/`, `../` (home).
+
+Orden de carga del CSS (cascada): `tokens → style → layout → header → components`.
 
 ---
 
