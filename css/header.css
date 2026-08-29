@@ -1,5 +1,5 @@
 /* ============================================================
-   ARDEVON · header.css
+   Building Measurements Services · header.css
    Bloques compartidos: topbar, header/nav, footer.
    (Deben ser idénticos en todas las páginas.)
    ============================================================ */
@@ -22,8 +22,10 @@ header{
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand .mark{width:30px;height:30px;flex:none}
-.brand .name{font-family:var(--font-display);font-weight:800;font-size:21px;letter-spacing:.16em}
-.brand .name span{color:var(--accent)}
+.brand .lockup{display:flex;flex-direction:column;line-height:1}
+.brand .name-1{font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:.085em}
+.brand .name-2{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.34em;color:var(--steel);margin-top:5px}
+@media (max-width:400px){.brand .name-1{font-size:13px}.brand .name-2{font-size:8.5px}}
 
 .menu{display:flex;gap:30px;align-items:center}
 .menu a{
@@ -57,8 +59,7 @@ header{
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:64px 0 30px}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
-.foot-brand .name{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:.16em;margin-bottom:16px}
-.foot-brand .name span{color:var(--accent)}
+.foot-brand .name{font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:.06em;line-height:1.1;margin-bottom:16px}
 .foot-brand p{color:var(--steel);font-size:13.5px;max-width:34ch}
 .foot-col h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-dim);margin-bottom:16px}
 .foot-col a{display:block;color:var(--steel);font-size:14px;padding:5px 0;transition:.2s}
