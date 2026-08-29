@@ -1,0 +1,59 @@
+/* ============================================================
+   ARDEVON · style.css
+   Reset, base tipográfica, botones, utilidades, animaciones.
+   ============================================================ */
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  background:var(--ink);
+  color:var(--white);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* --- helpers de texto --- */
+.mono{font-family:var(--font-mono)}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--accent);
+}
+h1,h2,h3,.display{
+  font-family:var(--font-display);
+  letter-spacing:-.01em;line-height:1.02;
+}
+
+/* --- rejilla tipo plano (utilidad) --- */
+.grid-bg{
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:var(--grid-size) var(--grid-size);
+}
+
+/* --- botones --- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-display);font-weight:600;font-size:13px;
+  letter-spacing:.04em;text-transform:uppercase;
+  padding:15px 24px;border:1px solid transparent;cursor:pointer;transition:.25s;
+}
+.btn .ar{transition:transform .25s}
+.btn:hover .ar{transform:translateX(4px)}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-hi)}
+.btn-ghost{background:transparent;color:var(--white);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--steel);background:rgba(255,255,255,.03)}
+
+/* --- reveal on-scroll --- */
+.reveal{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}

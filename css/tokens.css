@@ -1,0 +1,31 @@
+/* ============================================================
+   ARDEVON · tokens.css
+   Variables de diseño (color, tipografía, espaciado).
+   No poner reglas aquí — solo :root.
+   ============================================================ */
+
+:root{
+  /* --- color --- */
+  --ink:#0A1622;            /* base near-black navy (fondo página) */
+  --navy:#0F2135;           /* paneles / tarjetas */
+  --navy-hi:#16304A;        /* hover de paneles */
+  --steel:#8A97A8;          /* texto gris acero */
+  --steel-dim:#5B6A7C;      /* texto tenue / labels */
+  --white:#EEF2F6;          /* texto principal claro */
+  --accent:#3E7BD1;         /* azul blueprint — uso mínimo */
+  --accent-hi:#5A92DD;      /* hover del acento */
+
+  --line:rgba(255,255,255,.09);      /* bordes visibles */
+  --line-soft:rgba(255,255,255,.05); /* bordes sutiles */
+  --grid:rgba(255,255,255,.028);     /* rejilla tipo plano */
+
+  /* --- tipografía --- */
+  --font-display:'Archivo', sans-serif;
+  --font-body:'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+
+  /* --- layout --- */
+  --maxw:1240px;
+  --pad:clamp(20px, 5vw, 72px);
+  --grid-size:44px;
+}

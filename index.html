@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARDEVON — Architecture · Engineering · Design · Advisory</title>
+  <meta name="description" content="Canadian multidisciplinary architecture, engineering, design and advisory firm for the construction industry. Canadian expertise, global delivery.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS modular (orden por cascada) -->
+  <link rel="stylesheet" href="css/tokens.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/layout.css?v=1">
+  <link rel="stylesheet" href="css/header.css?v=1">
+  <link rel="stylesheet" href="css/components.css?v=1">
+</head>
+<body class="grid-bg">
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="wrap">
+      <span class="tagline">Canadian Expertise · Global Delivery</span>
+      <div class="r">
+        <a href="tel:+14378293211" class="mono">+1 (437) 829-3211</a>
+        <a href="#">EN</a><a href="#" style="opacity:.5">FR</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER (bloque compartido) ===== -->
+  <header>
+    <div class="wrap nav">
+      <a href="index.html" class="brand" aria-label="ARDEVON home">
+        <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <path d="M18 82 L18 30 L50 55 L82 30 L82 82" stroke="#EEF2F6" stroke-width="9" stroke-linejoin="miter"/>
+          <path d="M50 55 L50 82" stroke="#3E7BD1" stroke-width="9"/>
+        </svg>
+        <span class="name">ARDE<span>VON</span></span>
+      </a>
+      <nav class="menu">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#services">Services</a>
+        <a href="#sectors">Sectors</a>
+        <a href="#projects">Projects</a>
+        <a href="#global">Global</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Request a Proposal <span class="ar">→</span></a>
+        <button class="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <!-- menú móvil -->
+    <nav class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#projects">Projects</a>
+      <a href="#global">Global</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg grid-bg">
+      <div class="sky"></div>
+      <svg viewBox="0 0 900 360" preserveAspectRatio="xMaxYMax meet" fill="none" aria-hidden="true">
+        <g stroke="#26456A" stroke-width="1.4" opacity=".9">
+          <rect x="120" y="150" width="90" height="210"/>
+          <rect x="230" y="90"  width="70" height="270"/>
+          <rect x="320" y="180" width="110" height="180"/>
+          <rect x="450" y="60"  width="80" height="300"/>
+          <rect x="550" y="140" width="120" height="220"/>
+          <rect x="690" y="100" width="70" height="260"/>
+          <rect x="780" y="190" width="90" height="170"/>
+        </g>
+        <g stroke="#3E7BD1" stroke-width="1.4" opacity=".55">
+          <line x1="450" y1="60" x2="450" y2="18"/>
+          <line x1="450" y1="18" x2="560" y2="34"/>
+          <line x1="470" y1="24" x2="470" y2="60"/>
+          <circle cx="450" cy="18" r="3" fill="#3E7BD1"/>
+        </g>
+        <g stroke="#26456A" stroke-width="1" opacity=".5">
+          <line x1="120" y1="150" x2="210" y2="150"/>
+          <line x1="230" y1="90" x2="300" y2="90"/>
+          <line x1="550" y1="140" x2="670" y2="140"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Architecture · Engineering · Design · Advisory</div>
+        <h1>Designing better.<br>Engineering smarter.<br><span class="thin">Building beyond borders.</span></h1>
+        <p class="lead">A Canadian multidisciplinary firm delivering integrated architecture, engineering, design and advisory for complex projects — from first concept to technical documentation and delivery, across Canada and international markets.</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary">Our Services <span class="ar">→</span></a>
+          <a href="#projects" class="btn btn-ghost">View Projects <span class="ar">→</span></a>
+        </div>
+      </div>
+    </div>
+    <span class="hero-coord mono">43°44'N · 79°32'W — NORTH YORK, ON</span>
+
+    <div class="hstats">
+      <div class="wrap">
+        <div class="hstat"><div class="n">4</div><div class="l">Integrated Disciplines</div></div>
+        <div class="hstat"><div class="n">8</div><div class="l">Project Stages Covered</div></div>
+        <div class="hstat"><div class="n">5</div><div class="l">Markets Served</div></div>
+        <div class="hstat"><div class="n">1</div><div class="l">Coordination Platform</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="divider-label mono reveal">01 — WHAT WE DO</div>
+      <div class="sec-head reveal">
+        <h2>Integrated services under one platform</h2>
+        <p class="sub">Engage a single discipline or coordinate all of them through one central point — with the construction knowledge to keep solutions buildable, efficient and viable.</p>
+      </div>
+      <div class="svc-grid reveal">
+        <article class="svc"><span class="num mono">01</span>
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 42V14L24 6l18 8v28"/><path d="M6 42h36M18 42V26h12v16"/></svg>
+          <h3>Architecture &amp; Design</h3>
+          <p>Concept, schematic and design development, construction documentation, interiors, master planning and 3D visualization.</p>
+          <span class="more mono">EXPLORE →</span>
+        </article>
+        <article class="svc"><span class="num mono">02</span>
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 4v40M8 14l16-10 16 10M8 34l16 10 16-10"/><path d="M8 14v20M40 14v20"/></svg>
+          <h3>Engineering</h3>
+          <p>Structural, mechanical, electrical and civil engineering, building systems, analysis, technical coordination and value engineering.</p>
+          <span class="more mono">EXPLORE →</span>
+        </article>
+        <article class="svc"><span class="num mono">03</span>
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="6" width="16" height="16"/><rect x="26" y="6" width="16" height="16"/><rect x="6" y="26" width="16" height="16"/><rect x="26" y="26" width="16" height="16"/><path d="M22 14h4M14 22v4"/></svg>
+          <h3>Digital Engineering &amp; BIM</h3>
+          <p>BIM modeling, Revit production, clash detection, MEP and structural coordination, Scan-to-BIM and drawing production.</p>
+          <span class="more mono">EXPLORE →</span>
+        </article>
+        <article class="svc"><span class="num mono">04</span>
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 40V8h24l8 8v24z"/><path d="M32 8v8h8M14 24h20M14 32h20M14 16h10"/></svg>
+          <h3>Preconstruction &amp; Advisory</h3>
+          <p>Feasibility, constructability reviews, cost planning, quantity takeoffs, tender documentation, procurement and controls.</p>
+          <span class="more mono">EXPLORE →</span>
+        </article>
+        <article class="svc"><span class="num mono">05</span>
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 6"/></svg>
+          <h3>Project &amp; Design Management</h3>
+          <p>Design and project management, consultant coordination, technical due diligence, owner's representation and administration.</p>
+          <span class="more mono">EXPLORE →</span>
+        </article>
+        <article class="svc"><span class="num mono">06</span>
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 24h36M24 6c8 6 8 30 0 36M24 6c-8 6-8 30 0 36"/><circle cx="24" cy="24" r="18"/></svg>
+          <h3>Global Delivery</h3>
+          <p>Design, engineering, BIM and coordination for international projects, partnering with licensed professionals in each jurisdiction.</p>
+          <span class="more mono">EXPLORE →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process" id="approach">
+    <div class="wrap">
+      <div class="divider-label mono reveal">02 — HOW WE INTEGRATE</div>
+      <div class="sec-head reveal">
+        <h2>One workflow, from vision to delivery</h2>
+        <p class="sub">Enter the project at any stage. The value is a single, coordinated platform across the full lifecycle.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="step"><div class="s-n">01</div><div class="s-t">Vision</div></div>
+        <div class="step"><div class="s-n">02</div><div class="s-t">Feasibility</div></div>
+        <div class="step"><div class="s-n">03</div><div class="s-t">Design</div></div>
+        <div class="step"><div class="s-n">04</div><div class="s-t">Engineering</div></div>
+        <div class="step"><div class="s-n">05</div><div class="s-t">BIM</div></div>
+        <div class="step"><div class="s-n">06</div><div class="s-t">Precon</div></div>
+        <div class="step"><div class="s-n">07</div><div class="s-t">Delivery</div></div>
+        <div class="step"><div class="s-n">08</div><div class="s-t">Support</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTORS ===== -->
+  <section id="sectors">
+    <div class="wrap">
+      <div class="divider-label mono reveal">03 — SECTORS</div>
+      <div class="sec-head reveal">
+        <h2>Built for large-scale, complex programs</h2>
+        <p class="sub">Capacity to participate across the sectors that shape cities and infrastructure.</p>
+      </div>
+      <div class="sectors reveal">
+        <div class="sector"><span class="sc-n mono">/01</span><span class="sc-t">Commercial</span></div>
+        <div class="sector"><span class="sc-n mono">/02</span><span class="sc-t">Residential &amp; Multifamily</span></div>
+        <div class="sector"><span class="sc-n mono">/03</span><span class="sc-t">Industrial</span></div>
+        <div class="sector"><span class="sc-n mono">/04</span><span class="sc-t">Institutional</span></div>
+        <div class="sector"><span class="sc-n mono">/05</span><span class="sc-t">Healthcare</span></div>
+        <div class="sector"><span class="sc-n mono">/06</span><span class="sc-t">Hospitality</span></div>
+        <div class="sector"><span class="sc-n mono">/07</span><span class="sc-t">Infrastructure &amp; Transport</span></div>
+        <div class="sector"><span class="sc-n mono">/08</span><span class="sc-t">Government &amp; Public</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="process">
+    <div class="wrap">
+      <div class="divider-label mono reveal">04 — SELECTED WORK</div>
+      <div class="sec-head reveal">
+        <h2>Featured projects</h2>
+        <a href="#" class="btn btn-ghost">All Projects <span class="ar">→</span></a>
+      </div>
+      <div class="proj-grid reveal">
+        <article class="proj">
+          <div class="img grid-bg"><div class="ph mono">[ PROJECT IMAGE ]</div></div>
+          <div class="body"><span class="tag mono">Mixed-Use Development</span><h3>Waterfront Tower Complex</h3><span class="loc">Toronto, ON</span></div>
+        </article>
+        <article class="proj">
+          <div class="img grid-bg"><div class="ph mono">[ PROJECT IMAGE ]</div></div>
+          <div class="body"><span class="tag mono">Institutional</span><h3>Regional Health Campus</h3><span class="loc">Ottawa, ON</span></div>
+        </article>
+        <article class="proj">
+          <div class="img grid-bg"><div class="ph mono">[ PROJECT IMAGE ]</div></div>
+          <div class="body"><span class="tag mono">Infrastructure</span><h3>Transit Interchange Hub</h3><span class="loc">Montréal, QC</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GLOBAL ===== -->
+  <section class="global" id="global">
+    <div class="wrap global-inner">
+      <div class="reveal">
+        <div class="divider-label mono">05 — GLOBAL CAPABILITIES</div>
+        <h2>Canadian standards,<br>delivered anywhere</h2>
+        <p class="g-lead">Rooted in Canadian professional standards, with the technical capacity to support projects internationally — working alongside licensed architects and engineers in each jurisdiction.</p>
+        <a href="#contact" class="btn btn-primary">Discuss a Project <span class="ar">→</span></a>
+      </div>
+      <div class="markets reveal">
+        <div class="market"><span class="m-n">Canada</span><span class="m-s mono">HQ · ONTARIO</span></div>
+        <div class="market"><span class="m-n">United States</span><span class="m-s mono">CROSS-BORDER</span></div>
+        <div class="market"><span class="m-n">Caribbean</span><span class="m-s mono">DELIVERY</span></div>
+        <div class="market"><span class="m-n">Latin America</span><span class="m-s mono">DELIVERY</span></div>
+        <div class="market"><span class="m-n">Middle East</span><span class="m-s mono">DELIVERY</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <div class="reveal">
+        <div class="divider-label mono">06 — GET IN TOUCH</div>
+        <h2>Let's build something exceptional</h2>
+        <p class="lead">Developing a $50M, $200M or $1B+ project? Let's talk about how an integrated platform can de-risk and accelerate it.</p>
+        <div class="info-row"><span class="k mono">Office</span><span class="v">1155 Barmac Drive,<br>North York, ON&nbsp; M9L 1X4</span></div>
+        <div class="info-row"><span class="k mono">Phone</span><span class="v"><a href="tel:+14378293211">+1 (437) 829-3211</a></span></div>
+        <div class="info-row"><span class="k mono">Registered</span><span class="v">Ontario, Canada</span></div>
+      </div>
+      <div class="reveal">
+        <form class="form" action="#" method="post">
+          <div class="form-row">
+            <input class="field" type="text" name="name" placeholder="Full name" required>
+            <input class="field" type="email" name="email" placeholder="Email address" required>
+          </div>
+          <div class="form-row">
+            <input class="field" type="text" name="company" placeholder="Company">
+            <input class="field" type="tel" name="phone" placeholder="Phone">
+          </div>
+          <input class="field" type="text" name="project" placeholder="Project type / location">
+          <textarea class="field" name="message" placeholder="Tell us about your project"></textarea>
+          <button class="btn btn-primary" type="submit" style="justify-content:center">Send Message <span class="ar">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (bloque compartido) ===== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="name">ARDE<span>VON</span></div>
+          <p>Canadian multidisciplinary architecture, engineering, design and advisory for the construction industry.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Services</h4>
+          <a href="#services">Architecture</a><a href="#services">Engineering</a><a href="#services">Digital &amp; BIM</a><a href="#services">Preconstruction</a><a href="#services">Advisory</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#">About</a><a href="#approach">Our Approach</a><a href="#global">Global Delivery</a><a href="#">Careers</a><a href="#">Insights</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="tel:+14378293211">+1 (437) 829-3211</a><a href="#contact">North York, ON</a><a href="#contact">Request a Proposal</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span class="mono">© 2026 ARDEVON — Ontario, Canada. All rights reserved.</span>
+        <span class="mono">Canadian Expertise · Global Delivery</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=1"></script>
+</body>
+</html>

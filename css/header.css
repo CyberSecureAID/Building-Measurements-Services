@@ -1,0 +1,72 @@
+/* ============================================================
+   ARDEVON · header.css
+   Bloques compartidos: topbar, header/nav, footer.
+   (Deben ser idénticos en todas las páginas.)
+   ============================================================ */
+
+/* ---------- top bar ---------- */
+.topbar{border-bottom:1px solid var(--line-soft);font-size:12px;color:var(--steel)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.topbar .tagline{letter-spacing:.18em;text-transform:uppercase;font-size:10.5px}
+.topbar a{color:var(--steel)}
+.topbar a:hover{color:var(--white)}
+.topbar .r{display:flex;gap:22px;align-items:center}
+@media (max-width:760px){.topbar .tagline{display:none}}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,22,34,.82);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{width:30px;height:30px;flex:none}
+.brand .name{font-family:var(--font-display);font-weight:800;font-size:21px;letter-spacing:.16em}
+.brand .name span{color:var(--accent)}
+
+.menu{display:flex;gap:30px;align-items:center}
+.menu a{
+  font-size:13.5px;font-weight:500;color:var(--steel);letter-spacing:.02em;
+  transition:.2s;position:relative;padding:6px 0;
+}
+.menu a:hover{color:var(--white)}
+.menu a[aria-current="page"]{color:var(--white)}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:.25s}
+.menu a:hover::after,.menu a[aria-current="page"]::after{width:100%}
+
+.nav-cta{display:flex;align-items:center;gap:16px}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:0}
+.burger span{width:24px;height:2px;background:var(--white);transition:.25s}
+
+/* menú móvil desplegable */
+.mobile-menu{
+  display:none;flex-direction:column;
+  border-bottom:1px solid var(--line);background:var(--ink);
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:16px var(--pad);border-top:1px solid var(--line-soft);color:var(--steel);font-size:15px}
+.mobile-menu a:hover{color:var(--white);background:var(--navy)}
+
+@media (max-width:980px){
+  .menu{display:none}
+  .nav-cta .btn{display:none}
+  .burger{display:flex}
+}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:64px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-brand .name{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:.16em;margin-bottom:16px}
+.foot-brand .name span{color:var(--accent)}
+.foot-brand p{color:var(--steel);font-size:13.5px;max-width:34ch}
+.foot-col h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-dim);margin-bottom:16px}
+.foot-col a{display:block;color:var(--steel);font-size:14px;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--white)}
+.foot-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:24px;border-top:1px solid var(--line);
+  color:var(--steel-dim);font-size:12px;flex-wrap:wrap;gap:12px;
+}
+@media (max-width:840px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
