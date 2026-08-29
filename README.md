@@ -1,19 +1,22 @@
-# ARDEVON — Sitio web corporativo (proyecto)
+# Building Measurements Services — Sitio web corporativo (proyecto)
 
 Firma canadiense multidisciplinaria de **Architecture · Engineering · Design · Advisory**
 para la industria de la construcción. Base en Ontario, entrega internacional.
 Mensaje núcleo: **Canadian Expertise. Global Delivery.**
 
-> ⚠️ **Nombre provisional.** El sitio usa `ARDEVON` como *placeholder*. El nombre definitivo
-> lo confirma el dueño de la empresa. Alternativa limpia verificada: `NORVANCE`.
-> Cuando se confirme, se reemplaza en: `index.html`, `README.md`, `favicon.svg`, `<title>`, footer.
+> ✅ **Nombre CONFIRMADO por el dueño:** `Building Measurements Services`.
+> Notas de marca (registradas, no bloqueantes): las siglas **BMS** colisionan con
+> *Building Management System*; el nombre es descriptivo y tiende a leerse como
+> servicio de medición → se compensa con el descriptor AEC y el tagline en el lockup.
+> El logo definitivo sigue **pendiente** (hoy hay un monograma provisional en `favicon.svg` y header).
 
 ---
 
 ## 1. Datos oficiales (CONFIRMADOS — no inventar ni alterar)
 
 - **Razón social actual:** `1000301452 ONTARIO INC.` (sociedad numerada de Ontario).
-- **Nombre comercial:** PENDIENTE de confirmación del dueño (placeholder: ARDEVON).
+- **Nombre comercial:** `Building Measurements Services` (CONFIRMADO por el dueño).
+  *Pendiente: registrar el nombre comercial en Ontario y verificar marca en CIPO.*
 - **N.° de sociedad (OCN):** 1000301452 · Constituida: 01 septiembre 2022 (Business Corporations Act, Ontario).
 - **Teléfono:** +1 (437) 829-3211
 - **Dirección operativa (pública):** 1155 Barmac Drive, North York, ON M9L 1X4
@@ -92,7 +95,6 @@ Orden de carga del CSS (importa por la cascada): `tokens → style → layout �
 **Hecho (Fase 1):** Home modular — estructura, contenido base en inglés, paleta, componentes, animaciones, responsive, datos reales (dirección + teléfono).
 
 **Pendiente:**
-- Confirmar **nombre** definitivo (dueño) → reemplazar placeholder.
 - Confirmar **dirección pública** (1155 Barmac vs 896 Glencairn).
 - **Logo/branding real** (hoy monograma provisional en `favicon.svg` y header).
 - **Fotos reales** de proyectos/obra (hoy placeholders `[PROJECT IMAGE]`).
