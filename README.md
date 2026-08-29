@@ -4,19 +4,18 @@ Firma canadiense multidisciplinaria de **Architecture · Engineering · Design �
 para la industria de la construcción. Base en Ontario, entrega internacional.
 Mensaje núcleo: **Canadian Expertise. Global Delivery.**
 
-> ✅ **Nombre CONFIRMADO por el dueño:** `Building Measurements Services`.
-> Notas de marca (registradas, no bloqueantes): las siglas **BMS** colisionan con
-> *Building Management System*; el nombre es descriptivo y tiende a leerse como
-> servicio de medición → se compensa con el descriptor AEC y el tagline en el lockup.
+> ✅ **Nombre REGISTRADO oficialmente:** `BUILDING MEASUREMENTS SERVICES`
+> (Ontario · Business Names Act · BIN 1000715630 · vigente 20 nov 2023 → 19 nov 2028).
 > El logo definitivo sigue **pendiente** (hoy hay un monograma provisional en `favicon.svg` y header).
 
 ---
 
 ## 1. Datos oficiales (CONFIRMADOS — no inventar ni alterar)
 
-- **Razón social actual:** `1000301452 ONTARIO INC.` (sociedad numerada de Ontario).
-- **Nombre comercial:** `Building Measurements Services` (CONFIRMADO por el dueño).
-  *Pendiente: registrar el nombre comercial en Ontario y verificar marca en CIPO.*
+- **Razón social (registrante):** `1000301452 ONTARIO INC.` (sociedad numerada de Ontario).
+- **Nombre comercial:** `BUILDING MEASUREMENTS SERVICES` — **REGISTRADO** (Ontario, Business Names Act).
+  - **BIN (nombre comercial):** 1000715630 · Vigente 20 nov 2023 → **expira 19 nov 2028** (renovar antes).
+  - Nota: registrar el nombre comercial NO es marca registrada; la protección de marca (CIPO) es aparte y opcional.
 - **N.° de sociedad (OCN):** 1000301452 · Constituida: 01 septiembre 2022 (Business Corporations Act, Ontario).
 - **Teléfono:** +1 (437) 829-3211
 - **Dirección operativa (pública):** 1155 Barmac Drive, North York, ON M9L 1X4
