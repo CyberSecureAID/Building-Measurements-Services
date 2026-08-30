@@ -99,7 +99,7 @@
         '</div>' +
         '<div class="foot-col"><h4>Contact</h4>' +
           '<a href="tel:+' + C.phoneTel + '">' + C.phoneShow + '</a>' +
-          '<a href="' + href('contact/') + '">' + C.cityShort + '</a>' +
+          '<a href="' + href('contact/') + '">' + C.address1 + '<br>' + C.address2 + '</a>' +
           '<a href="' + href('contact/') + '">Request a Proposal</a>' +
         '</div>' +
       '</div>' +
@@ -154,5 +154,26 @@
     reveals.forEach(function (el) { io.observe(el); });
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---- Contador animado en las estadísticas (4·8·5·1) ---- */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nums = document.querySelectorAll('.hstat .n');
+  if (nums.length && 'IntersectionObserver' in window && !reduce) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target, target = parseInt(el.textContent, 10);
+        co.unobserve(el);
+        if (isNaN(target)) return;
+        var dur = 900, t0 = performance.now();
+        (function step(now) {
+          var p = Math.min((now - t0) / dur, 1);
+          el.textContent = Math.round(target * (p * (2 - p)));
+          if (p < 1) requestAnimationFrame(step);
+        })(t0);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach(function (el) { co.observe(el); });
   }
 })();
