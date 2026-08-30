@@ -34,10 +34,6 @@
   }).join('');
 
   var headerHTML =
-    '<div class="topbar"><div class="wrap">' +
-      '<span class="tagline">Canadian Expertise &middot; Global Delivery</span>' +
-      '<div class="r"><a href="tel:+14378293211">+1 (437) 829-3211</a></div>' +
-    '</div></div>' +
     '<header><div class="wrap nav">' +
       '<a href="' + home + '" class="brand" aria-label="Building Measurements Services home">' +
         '<img class="brand-logo" src="' + base + 'images/logo.webp" alt="Building Measurements Services" width="38" height="40">' +
