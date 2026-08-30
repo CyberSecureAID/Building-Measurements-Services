@@ -222,8 +222,35 @@ textarea.field{min-height:110px;resize:vertical}
   background-position:center;
   background-repeat:no-repeat;
 }
-/* Las bandas grandes vuelven a fondo plano (la textura NO va en áreas grandes) */
-.cta-band, .process, .global{ background:var(--navy) }
+/* Bandas grandes: fondo TRABAJADO con CSS (degradado + resplandor + malla fina tipo plano).
+   Todo es CSS escalable: nunca se pixela, a ningún tamaño. */
+.cta-band, .process, .global{
+  position:relative;
+  background:
+    radial-gradient(90% 120% at 82% -15%, rgba(62,123,209,.13), transparent 55%),
+    linear-gradient(180deg, #11243d 0%, #0c1c30 100%);
+}
+.global{
+  background:
+    radial-gradient(85% 120% at 16% -15%, rgba(62,123,209,.13), transparent 55%),
+    linear-gradient(180deg, #11243d 0%, #0c1c30 100%);
+}
+.cta-band{
+  background:
+    radial-gradient(100% 130% at 50% -20%, rgba(62,123,209,.15), transparent 58%),
+    linear-gradient(180deg, #12273f 0%, #0c1c30 100%);
+}
+.cta-band::before, .process::before, .global::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 46px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.028) 0 1px, transparent 1px 46px);
+  -webkit-mask-image:radial-gradient(125% 100% at 50% 0%, #000 32%, transparent 92%);
+  mask-image:radial-gradient(125% 100% at 50% 0%, #000 32%, transparent 92%);
+}
+.cta-band > .wrap, .process > .wrap, .global > .wrap{position:relative;z-index:1}
+/* recuadro de mercados: panel limpio sobre la banda trabajada */
+.markets{ background:rgba(9,19,33,.6) }
 
 /* Profundidad 3D premium (sombra + borde superior sutil) */
 .svc, .sector, .feature, .profile-card, .proj{
