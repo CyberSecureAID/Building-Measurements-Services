@@ -162,3 +162,26 @@ textarea.field{min-height:110px;resize:vertical}
 .svc-list li::before{content:"\203A";color:var(--accent)}
 @media (max-width:840px){.sb-grid{grid-template-columns:1fr;gap:24px}}
 @media (max-width:520px){.svc-list{grid-template-columns:1fr}}
+
+/* ============================================================
+   Ajustes MÓVIL (versión resumida)
+   ============================================================ */
+@media (max-width:600px){
+  /* Home hero: quitar el eyebrow azul largo y acortar el título */
+  .hero .eyebrow{display:none}
+  .hero h1 .thin{display:none}
+  .hero h1{font-size:clamp(30px,8.5vw,40px);line-height:1.12}
+  .hero .lead{font-size:15px;line-height:1.5;margin:14px 0 22px}
+  .hero{min-height:clamp(360px,64vh,480px)}
+
+  /* Page-hero interno: títulos y textos más compactos */
+  .page-hero h1{font-size:clamp(26px,7.5vw,34px)}
+  .page-hero .lead{font-size:15px}
+  .page-hero{min-height:clamp(240px,42vh,320px)}
+
+  /* Encabezados de sección más compactos */
+  .sec-head h2, .global-inner h2, .contact h2, .cta-band h2{font-size:clamp(24px,7.5vw,30px)}
+
+  /* Seguridad anti-desborde horizontal */
+  .process, .global, section{overflow-x:hidden}
+}
