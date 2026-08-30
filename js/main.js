@@ -43,6 +43,21 @@
       { id:"projects", label:"Projects", path:"projects/" },
       { id:"global",   label:"Global",   path:"global/" },
       { id:"contact",  label:"Contact",  path:"contact/" }
+    ],
+    // Reemplazos de texto que se aplican en TODAS las páginas (1 solo lugar).
+    // Para cambiar una palabra en todo el sitio, agrégala aquí: ["antes","después"]
+    textFixes: [
+      ["large-scale", "large scale"],
+      ["Scan-to-BIM", "Scan to BIM"],
+      ["Cross-border", "Cross border"],
+      ["cross-border", "cross border"],
+      ["Cross-discipline", "Cross discipline"],
+      ["multi-unit", "multi unit"],
+      ["Mixed-Use", "Mixed Use"],
+      ["Model-based", "Model based"],
+      ["De-risk the project early", "Reduce risk early"],
+      ["delivery — the disciplines", "delivery. The disciplines"],
+      ["—", " "]
     ]
   };
   /* ==============  FIN CONFIG  ============================= */
@@ -126,6 +141,29 @@
       el.href = 'tel:+' + C.phoneTel;
     }
   });
+
+  /* ---- Reemplazos de texto globales (CONFIG.textFixes) en toda la página ----
+     Recorre solo nodos de TEXTO (nunca código, clases ni el teléfono). */
+  (function applyTextFixes(){
+    var fixes = CONFIG.textFixes || [];
+    if (!fixes.length) return;
+    var skip = { SCRIPT:1, STYLE:1, A_TEL:1 };
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var node, changed;
+    var nodes = [];
+    while ((node = walker.nextNode())) { nodes.push(node); }
+    nodes.forEach(function(n){
+      var parent = n.parentNode;
+      if (!parent) return;
+      var tag = parent.nodeName;
+      if (tag === 'SCRIPT' || tag === 'STYLE') return;
+      // no tocar enlaces de teléfono (tel:)
+      if (tag === 'A' && (parent.getAttribute('href') || '').indexOf('tel:') === 0) return;
+      var t = n.nodeValue, nt = t;
+      for (var i = 0; i < fixes.length; i++) { nt = nt.split(fixes[i][0]).join(fixes[i][1]); }
+      if (nt !== t) n.nodeValue = nt;
+    });
+  })();
 
   /* ---- Menú móvil ---- */
   var burger = document.querySelector('.burger');
