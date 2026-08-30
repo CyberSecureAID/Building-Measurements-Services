@@ -30,7 +30,7 @@
       address2:    "North York, ON  M9L 1X4",
       cityShort:   "North York, ON",
       registered:  "Ontario, Canada",
-      legal:       "",                    // ej: "BIN 1000715630 · Incorporated 2022" (vacío = no se muestra)
+      legal:       "BIN 1000715630 · Incorporated in Ontario, 2022",                    // ej: "BIN 1000715630 · Incorporated 2022" (vacío = no se muestra)
       footerBlurb: "Canadian multidisciplinary architecture, engineering, design and advisory for the construction industry.",
       copyright:   "© 2026 Building Measurements Services. Ontario, Canada. All rights reserved."
     },
