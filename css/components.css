@@ -13,18 +13,18 @@
 
 /* ---------- hero (home) ---------- */
 .hero{position:relative;overflow:hidden;padding:0;
-  display:flex;flex-direction:column;min-height:clamp(440px,58vh,560px);
+  display:flex;flex-direction:column;min-height:clamp(400px,54vh,540px);
   background-color:#0A1622;background-position:center;background-size:cover;background-repeat:no-repeat}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;
   background:linear-gradient(90deg, rgba(8,17,28,.96) 0%, rgba(8,17,28,.86) 42%, rgba(8,17,28,.5) 100%)}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;
   background:linear-gradient(180deg, rgba(8,17,28,.55) 0%, rgba(8,17,28,0) 30%, rgba(8,17,28,.45) 72%, rgba(10,22,34,1) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%;flex:1;display:flex;flex-direction:column;justify-content:flex-end;
-  padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(20px,3vw,32px)}
+  padding-top:clamp(24px,3vw,42px);padding-bottom:clamp(8px,1.2vw,14px)}
 .hero .eyebrow{margin-bottom:14px}
 .hero h1{font-size:clamp(30px,4.4vw,52px);font-weight:800;line-height:1.08;max-width:18ch}
 .hero h1 .thin{color:var(--steel);font-weight:500}
-.hero .lead{margin:18px 0 26px;max-width:50ch;color:#C4CCD6;font-size:clamp(15px,1.5vw,17px)}
+.hero .lead{margin:14px 0 18px;max-width:50ch;color:#C4CCD6;font-size:clamp(15px,1.5vw,17px)}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
 
 /* hero stats: banda horizontal redondeada */
@@ -172,12 +172,13 @@ textarea.field{min-height:110px;resize:vertical}
    Ajustes MÓVIL (versión resumida)
    ============================================================ */
 @media (max-width:600px){
-  /* Home hero: solo título corto + botones sobre la imagen (sin párrafo) */
+  /* Home hero: título centrado sobre la imagen, con aire antes de los botones */
   .hero .eyebrow{display:none}
   .hero h1 .thin{display:none}
-  .hero h1{font-size:clamp(24px,7.2vw,32px);line-height:1.14}
+  .hero h1{font-size:clamp(24px,7.2vw,32px);line-height:1.16;margin-bottom:24px}
   .hero .lead{display:none}
-  .hero{min-height:clamp(330px,56vh,430px)}
+  .hero .wrap{justify-content:center;padding-top:clamp(48px,16vw,90px);padding-bottom:clamp(36px,10vw,60px)}
+  .hero{min-height:clamp(400px,64vh,500px)}
   .hero-cta{justify-content:center}
 
   /* Page-hero interno: título pequeño y sin párrafo, deja ver el fondo */
@@ -299,4 +300,18 @@ textarea.field{min-height:110px;resize:vertical}
 @media (max-width:820px){
   .contact-card{grid-template-columns:1fr}
   .contact-info{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
+}
+
+/* ============================================================
+   Banda de STATS — solo ESCRITORIO: más fina, más arriba, más sombra 3D
+   (en móvil se queda como está)
+   ============================================================ */
+@media (min-width:701px){
+  .hstats-band{padding-top:2px;padding-bottom:clamp(10px,1.6vw,18px)}
+  .hstat{padding-top:7px;padding-bottom:7px}
+  .hstat .n{font-size:clamp(19px,1.8vw,23px)}
+  .hstat .l{margin-top:1px}
+  .hstats-inner{
+    box-shadow:0 24px 46px -18px rgba(0,0,0,.82), 0 4px 10px -5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08);
+  }
 }
