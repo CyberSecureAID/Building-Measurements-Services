@@ -236,3 +236,37 @@ textarea.field{min-height:110px;resize:vertical}
   box-shadow:0 30px 52px -20px rgba(0,0,0,.85), 0 4px 10px -4px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.10);
 }
 .svc-list li{ box-shadow:0 10px 20px -12px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.05); }
+
+/* ============================================================
+   CONTACTO — panel premium (rediseño)
+   ============================================================ */
+.contact-card{
+  display:grid;grid-template-columns:0.92fr 1.08fr;
+  border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 26px 60px -26px rgba(0,0,0,.85), 0 3px 8px -4px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.06);
+}
+/* lado izquierdo: panel de info (textura + acento) */
+.contact-info{
+  position:relative;padding:clamp(30px,3.4vw,48px);
+  background:linear-gradient(rgba(16,32,54,.62),rgba(11,24,40,.82)), url('../images/texture.jpg') center/cover;
+  border-right:1px solid rgba(255,255,255,.08);
+}
+.contact-info::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--accent),transparent);
+}
+.contact-info h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;margin-bottom:12px}
+.ci-lead{color:var(--steel);font-size:15px;line-height:1.55;margin-bottom:30px;max-width:38ch}
+.ci-list{display:flex;flex-direction:column;gap:22px}
+.ci-k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.ci-v{font-size:15.5px;color:var(--white);line-height:1.5}
+.ci-v a{color:var(--white);border-bottom:1px solid transparent;transition:.18s}
+.ci-v a:hover{border-bottom-color:var(--accent)}
+/* lado derecho: formulario */
+.contact-form-wrap{padding:clamp(30px,3.4vw,48px);background:rgba(8,17,28,.35)}
+.contact-form-wrap .form{gap:14px}
+
+@media (max-width:820px){
+  .contact-card{grid-template-columns:1fr}
+  .contact-info{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
+}
