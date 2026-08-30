@@ -124,7 +124,8 @@ textarea.field{min-height:110px;resize:vertical}
 .page-hero h1{font-size:clamp(26px,3.4vw,40px);font-weight:800;line-height:1.1;max-width:20ch}
 .page-hero .lead{margin-top:16px;max-width:56ch;color:#C4CCD6;font-size:clamp(15px,1.5vw,17px)}
 
-.statement{font-family:var(--font-display);font-weight:500;font-size:clamp(20px,2.4vw,28px);line-height:1.32;max-width:60ch}
+.statement{font-family:var(--font-display);font-weight:500;font-size:clamp(16px,1.8vw,20px);line-height:1.5;max-width:70ch;color:#C4CCD6}
+.statement em{font-style:normal;color:var(--accent)}
 .statement em{font-style:normal;color:var(--accent)}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
@@ -139,7 +140,7 @@ textarea.field{min-height:110px;resize:vertical}
 @media (max-width:860px){.feature-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.feature-grid{grid-template-columns:1fr}}
 
-.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:18px}
+.profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,340px));gap:18px;justify-content:center}
 .profile-card{background:var(--navy);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .profile-card .avatar{width:52px;height:52px;border:1px solid var(--line);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--steel-dim);font-size:10px;letter-spacing:.08em;margin-bottom:16px}
 .profile-card h3{font-size:16px;font-weight:700}
@@ -213,18 +214,16 @@ textarea.field{min-height:110px;resize:vertical}
   background-repeat:no-repeat;
 }
 
-/* Bandas grandes "azules feas": textura de fondo con velo algo mayor (texto legible) */
-.cta-band, .process, .global{
+/* Chips pequeños del proceso + franja inferior de tarjetas de proyecto: textura pequeña (se ve bien) */
+.step, .proj .body{
   background-color:var(--navy);
-  background-image:linear-gradient(rgba(10,22,34,.6), rgba(10,22,34,.72)), url('../images/texture.jpg');
+  background-image:linear-gradient(rgba(10,22,34,.42), rgba(10,22,34,.56)), url('../images/texture.jpg');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
-
-/* Contenedores internos sobre las bandas: fondo propio para no ensuciar la lectura */
-.markets{ background-color:rgba(8,17,28,.55); }
-.step{ background-color:rgba(8,17,28,.5); }
+/* Las bandas grandes vuelven a fondo plano (la textura NO va en áreas grandes) */
+.cta-band, .process, .global{ background:var(--navy) }
 
 /* Profundidad 3D premium (sombra + borde superior sutil) */
 .svc, .sector, .feature, .profile-card, .proj{
@@ -248,7 +247,7 @@ textarea.field{min-height:110px;resize:vertical}
 /* lado izquierdo: panel de info (textura + acento) */
 .contact-info{
   position:relative;padding:clamp(30px,3.4vw,48px);
-  background:linear-gradient(rgba(16,32,54,.62),rgba(11,24,40,.82)), url('../images/texture.jpg') center/cover;
+  background:var(--navy-hi);
   border-right:1px solid rgba(255,255,255,.08);
 }
 .contact-info::before{
