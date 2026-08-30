@@ -68,16 +68,16 @@
 
 /* ---------- proyectos ---------- */
 .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.proj{background:var(--navy);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.24s;box-shadow:0 12px 26px -14px rgba(0,0,0,.7)}
+.proj{background:var(--navy);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.24s;box-shadow:0 12px 26px -14px rgba(0,0,0,.7);display:flex;flex-direction:column}
 .proj:hover{transform:translateY(-3px);box-shadow:0 20px 36px -16px rgba(0,0,0,.75)}
-.proj .img{height:190px;background:#0C1A2A center/cover no-repeat}
-.i-proj1{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-1.jpg')}
-.i-proj2{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-2.jpg')}
-.i-proj3{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-3.jpg')}
-.i-proj4{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-4.jpg')}
-.i-proj5{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-5.jpg')}
-.i-proj6{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-6.jpg')}
-.proj .body{padding:20px}
+.proj .img{height:190px;flex:none;background-color:#0C1A2A;background-size:cover;background-position:center;background-repeat:no-repeat}
+.i-proj1{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-1.webp')}
+.i-proj2{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-2.webp')}
+.i-proj3{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-3.webp')}
+.i-proj4{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-4.webp')}
+.i-proj5{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-5.webp')}
+.i-proj6{background-image:linear-gradient(180deg,rgba(10,22,34,.12),rgba(10,22,34,.5)),url('../images/proj-6.webp')}
+.proj .body{padding:20px;flex:1}
 .proj .tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 .proj h3{font-size:17px;font-weight:700;margin:7px 0 5px}
 .proj .loc{color:var(--steel);font-size:13px}
