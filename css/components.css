@@ -177,7 +177,7 @@ textarea.field{min-height:110px;resize:vertical}
   .hero h1 .thin{display:none}
   .hero h1{font-size:clamp(24px,7.2vw,32px);line-height:1.16;margin-bottom:24px}
   .hero .lead{display:none}
-  .hero .wrap{justify-content:center;padding-top:clamp(48px,16vw,90px);padding-bottom:clamp(36px,10vw,60px)}
+  .hero .wrap{justify-content:center;align-items:center;text-align:center;padding-top:clamp(48px,16vw,90px);padding-bottom:clamp(36px,10vw,60px)}
   .hero{min-height:clamp(400px,64vh,500px)}
   .hero-cta{justify-content:center}
 
@@ -307,7 +307,7 @@ textarea.field{min-height:110px;resize:vertical}
    (en móvil se queda como está)
    ============================================================ */
 @media (min-width:701px){
-  .hstats-band{padding-top:2px;padding-bottom:clamp(10px,1.6vw,18px)}
+  .hstats-band{padding-top:clamp(12px,1.8vw,22px);padding-bottom:clamp(12px,1.8vw,22px)}
   .hstat{padding-top:7px;padding-bottom:7px}
   .hstat .n{font-size:clamp(19px,1.8vw,23px)}
   .hstat .l{margin-top:1px}
