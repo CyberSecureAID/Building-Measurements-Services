@@ -24,8 +24,9 @@
       tagline:     "Canadian Expertise · Global Delivery",
       phoneShow:   "+1 (437) 829-3211",   // como se muestra
       phoneTel:    "14378293211",         // solo dígitos, para el enlace tel:
-      email:       "",                    // vacío => se muestra "Available soon"
+      email:       "buildingm@bmservices.blog",   // vacío => se muestra "Available soon"
       emailFallback: "Available soon",
+      website:     "bmservices.blog",      // sin https://
       address1:    "1155 Barmac Drive",
       address2:    "North York, ON  M9L 1X4",
       cityShort:   "North York, ON",
@@ -34,6 +35,9 @@
       footerBlurb: "Canadian multidisciplinary architecture, engineering, design and advisory for the construction industry.",
       copyright:   "© 2026 Building Measurements Services. Ontario, Canada. All rights reserved."
     },
+    // Formulario de contacto (Web3Forms). Pega aquí tu Access Key gratuita de web3forms.com
+    // (usa el correo buildingm@bmservices.blog al generarla; los mensajes llegarán ahí).
+    web3formsKey: "PEGA-AQUI-TU-ACCESS-KEY",
     // Menú principal (etiquetas y orden). id = página activa.
     nav: [
       { id:"home",     label:"Home",     path:"" },
@@ -114,6 +118,7 @@
         '</div>' +
         '<div class="foot-col"><h4>Contact</h4>' +
           '<a href="tel:+' + C.phoneTel + '">' + C.phoneShow + '</a>' +
+          (C.email ? '<a href="mailto:' + C.email + '">' + C.email + '</a>' : '') +
           '<a href="' + href('contact/') + '">' + C.address1 + '<br>' + C.address2 + '</a>' +
           '<a href="' + href('contact/') + '">Request a Proposal</a>' +
         '</div>' +
@@ -136,7 +141,12 @@
     if (v === undefined) return;
     if ((v === '' || v == null) && el.hasAttribute('data-c-empty')) v = el.getAttribute('data-c-empty');
     if ((v === '' || v == null) && el.getAttribute('data-c') === 'company.email') v = C.emailFallback;
-    el.textContent = v;
+    // El correo se muestra como enlace mailto (si hay correo real)
+    if (el.getAttribute('data-c') === 'company.email' && C.email) {
+      el.innerHTML = '<a href="mailto:' + C.email + '" style="color:inherit;text-decoration:none">' + C.email + '</a>';
+    } else {
+      el.textContent = v;
+    }
     if (el.tagName === 'A' && (el.getAttribute('href') || '').indexOf('tel:') === 0) {
       el.href = 'tel:+' + C.phoneTel;
     }
@@ -180,6 +190,55 @@
       });
     });
   }
+
+  /* ---- Formulario de contacto -> Web3Forms ---- */
+  (function contactForm(){
+    var form = document.querySelector('form.form');
+    if (!form) return;
+    var btn = form.querySelector('button[type="submit"]');
+    var status = document.createElement('div');
+    status.style.cssText = 'font-size:14px;margin-top:2px;min-height:18px';
+    form.appendChild(status);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var key = CONFIG.web3formsKey || '';
+      if (!key || key.indexOf('PEGA') === 0) {
+        status.style.color = '#e6a23c';
+        status.textContent = 'Form not connected yet (missing Web3Forms key).';
+        return;
+      }
+      var data = { access_key: key, subject: 'New enquiry — Building Measurements Services', from_name: 'BMS Website' };
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+      var original = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      status.style.color = 'var(--steel)';
+      status.textContent = '';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (res.success) {
+          form.reset();
+          status.style.color = '#7ee0a5';
+          status.textContent = 'Thank you. We’ll be in touch shortly.';
+        } else {
+          status.style.color = '#e06666';
+          status.textContent = 'Something went wrong. Please email us directly.';
+        }
+      })
+      .catch(function () {
+        status.style.color = '#e06666';
+        status.textContent = 'Network error. Please email us directly.';
+      })
+      .finally(function () { if (btn) { btn.disabled = false; btn.textContent = original; } });
+    });
+  })();
 
   /* ---- Reveal on-scroll ---- */
   var reveals = document.querySelectorAll('.reveal');
